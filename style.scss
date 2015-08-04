@@ -1,0 +1,220 @@
+
+
+// colors
+$gray-500: #263238;
+$gray-400: #445A64;
+$gray-300: #5F7D8C;
+$gray-200: #8FA4AF;	
+$gray-100: #CFD8DC;
+$gray-000: #ECEFF1;
+//
+$red-500: #BC0D00;
+$red-400: #D21202;
+$red-300: #E81716;
+$red-200: #F56B5C;	
+$red-100: #F89985;
+$red-000: #FEE0DB;
+//
+$blue-500: #00559D;
+$blue-400: #0086D4;
+$blue-300: #00A7F7;
+$blue-200: #7DD3FC;	
+$blue-100: #B1E5FD;
+$blue-000: #E0F5FF;
+//
+$green-500: #025932;
+$green-400: #01834B;
+$green-300: #00AD63;
+$green-200: #4CC27D;	
+$green-100: #92D6AE;
+$green-000: #C5E3D2;
+//
+$orange-500: #E34F00;
+$orange-400: #F16C00;
+$orange-300: #F77C00;
+$orange-200: #FF9901;	
+$orange-100: #FFCD7A;
+$orange-000: #FFF3DF;
+// touch events / selection
+body{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+// fonts
+$dagny-tk: 'ff-dagny-web-pro';
+$dagny-light: 'ff-dagny-web';
+
+.dagny-100 {
+  font-family: $dagny-light;
+  font-weight: 100;
+        font-variant-numeric: lining-nums;
+    -moz-font-feature-settings:"lnum" 1; 
+    -moz-font-feature-settings:"lnum=1"; 
+    -ms-font-feature-settings:"lnum" 1; 
+    -o-font-feature-settings:"lnum" 1; 
+    -webkit-font-feature-settings:"lnum" 1; 
+    font-feature-settings:"lnum" 1;
+}
+
+.dagny-200{
+	font-family: $dagny-tk;
+  font-weight: 200;
+        font-variant-numeric: lining-nums;
+    -moz-font-feature-settings:"lnum" 1; 
+    -moz-font-feature-settings:"lnum=1"; 
+    -ms-font-feature-settings:"lnum" 1; 
+    -o-font-feature-settings:"lnum" 1; 
+    -webkit-font-feature-settings:"lnum" 1; 
+    font-feature-settings:"lnum" 1;
+}
+.dagny-300{
+	font-family: $dagny-light;
+  font-weight: 300;
+      font-variant-numeric: lining-nums;
+    -moz-font-feature-settings:"lnum" 1; 
+    -moz-font-feature-settings:"lnum=1"; 
+    -ms-font-feature-settings:"lnum" 1; 
+    -o-font-feature-settings:"lnum" 1; 
+    -webkit-font-feature-settings:"lnum" 1; 
+    font-feature-settings:"lnum" 1;
+}
+
+.dagny-400{
+	font-family: $dagny-tk;
+  font-weight: 400;
+        font-variant-numeric: lining-nums;
+    -moz-font-feature-settings:"lnum" 1; 
+    -moz-font-feature-settings:"lnum=1"; 
+    -ms-font-feature-settings:"lnum" 1; 
+    -o-font-feature-settings:"lnum" 1; 
+    -webkit-font-feature-settings:"lnum" 1; 
+    font-feature-settings:"lnum" 1;
+}
+.dagny-500{
+  font-family: $dagny-tk;
+  font-weight: 700;
+}
+.dagny-600{
+	font-family: $dagny-tk;
+  font-weight: 900;
+}
+
+// extend typography
+.reg-list{
+	list-style: none;
+  	padding: 0;
+  	margin: 0;
+  	text-indent: 0;
+}
+
+// ungrid
+@media (min-width: 30em) {
+    .row { width: 100%; display: table; table-layout: fixed; }
+    .col { display: table-cell; }
+}
+
+$filter-width: 325px;
+
+body{
+	@extend .dagny-300;
+	margin: 0;
+	padding: 0;
+}
+.body-wrapper{
+	position: relative;
+	transition: left 0.5s;
+	left: 0px;
+	left:$filter-width;
+}
+/// *************************
+/// *************************
+// nav
+/// *************************
+/// *************************
+nav{
+	position: relative;
+	background: $green-300;
+	padding: 20px 0;
+	i.ion-navicon{
+		position: absolute;
+		left: 20px;
+		top:15px;
+		color: #fff;
+		font-size: 32px;
+	}
+	h1{
+		color: #fff;
+		margin: 0;
+		margin-left: 60px;
+	}
+}
+
+.filter-active{
+	//left:$filter-width;
+}
+
+
+/// *************************
+/// *************************
+// filter section
+/// *************************
+/// *************************
+
+$filter-padding: 16px;
+$filter-border: 1px solid $gray-100;
+.filter-section{
+	position: absolute;
+	left:$filter-width * -1;
+	top:0px;
+	width:$filter-width;
+	h1.filter-title{
+		text-align: center;
+		margin: 0;
+		height:64px;
+		line-height: 64px;
+		background: white;
+		color: $gray-300;
+		@extend .dagny-200;
+
+		i{
+			margin-right: 10px;
+			color: $gray-200;
+
+		}
+	}
+}
+
+.filter-item-container{
+	border-top: $filter-border;
+	border-bottom: $filter-border;
+	border-right: $filter-border;
+}
+
+h2.filter-item-heading{
+	width:100%;
+	position: relative;
+	background: $gray-000;
+	margin: 0;
+	padding: $filter-padding 0;
+	color: $gray-200;
+	@extend .dagny-100;
+	span{
+		padding-left: 20px;
+	}
+
+	i.icon{
+		position: absolute;
+		right: 20px;
+		color: $gray-200;
+	}
+}
+
+.filter-item-search-container{
+	width: 100%;
+	background: $blue-200;
+}
