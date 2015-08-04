@@ -1,5 +1,4 @@
 
-
 // colors
 $gray-500: #263238;
 $gray-400: #445A64;
@@ -118,103 +117,101 @@ $dagny-light: 'ff-dagny-web';
     .col { display: table-cell; }
 }
 
-$filter-width: 325px;
 
-body{
+body, html{
 	@extend .dagny-300;
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 .body-wrapper{
 	position: relative;
 	transition: left 0.5s;
 	left: 0px;
-	left:$filter-width;
-}
-/// *************************
-/// *************************
-// nav
-/// *************************
-/// *************************
-nav{
-	position: relative;
-	background: $green-300;
-	padding: 20px 0;
-	i.ion-navicon{
-		position: absolute;
-		left: 20px;
-		top:15px;
-		color: #fff;
-		font-size: 32px;
-	}
-	h1{
-		color: #fff;
-		margin: 0;
-		margin-left: 60px;
-	}
-}
-
-.filter-active{
-	//left:$filter-width;
-}
-
-
-/// *************************
-/// *************************
-// filter section
-/// *************************
-/// *************************
-
-$filter-padding: 16px;
-$filter-border: 1px solid $gray-100;
-.filter-section{
-	position: absolute;
-	left:$filter-width * -1;
-	top:0px;
-	width:$filter-width;
-	h1.filter-title{
-		text-align: center;
-		margin: 0;
-		height:64px;
-		line-height: 64px;
-		background: white;
-		color: $gray-300;
-		@extend .dagny-200;
-
-		i{
-			margin-right: 10px;
-			color: $gray-200;
-
-		}
-	}
-}
-
-.filter-item-container{
-	border-top: $filter-border;
-	border-bottom: $filter-border;
-	border-right: $filter-border;
-}
-
-h2.filter-item-heading{
-	width:100%;
-	position: relative;
-	background: $gray-000;
-	margin: 0;
-	padding: $filter-padding 0;
-	color: $gray-200;
-	@extend .dagny-100;
-	span{
-		padding-left: 20px;
-	}
-
-	i.icon{
-		position: absolute;
-		right: 20px;
-		color: $gray-200;
-	}
-}
-
-.filter-item-search-container{
+	height: 100%;
 	width: 100%;
-	background: $blue-200;
+	background: $red-100;
 }
+
+.row{
+	height: 100%;
+}
+
+/// *************************
+/// *************************
+// left side
+/// *************************
+/// *************************
+
+.left-side-col{
+	background: $red-100;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;
+}
+/// *************************
+/// *************************
+// right side
+/// *************************
+/// *************************
+
+.right-side-col{
+	background: white;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;
+	h1{
+		@extend .dagny-500;
+		font-size: 50px;
+		margin: 20px auto;
+	}
+
+	p{
+		padding: 0 20px;
+		max-width: 85%;
+		margin: 0 auto;
+		@extend .dagny-200;
+		font-size: 22px;
+		line-height: 28px;
+	}
+}
+
+/// *************************
+/// *************************
+//  flickty gallery
+/// *************************
+/// *************************
+
+.main-gallery{
+	transition: 0.3s background;
+}
+.gallery-cell{
+	width: 100%;
+}
+
+.flickity-page-dots{
+	bottom: 20px;
+
+}
+li.dots{
+	background-color: red;
+		transition: 0.3s opacity !important;
+	}
+
+/// *************************
+/// *************************
+//  2nd slide
+/// *************************
+/// *************************
+.ion-heart{
+	color: $red-200;
+}
+
+
+
+
+
+
+
+
+

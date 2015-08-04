@@ -6,7 +6,7 @@ body {
   -ms-user-select: none;
   user-select: none; }
 
-.dagny-100, h2.filter-item-heading {
+.dagny-100 {
   font-family: "ff-dagny-web";
   font-weight: 100;
   font-variant-numeric: lining-nums;
@@ -17,7 +17,7 @@ body {
   -webkit-font-feature-settings: "lnum" 1;
   font-feature-settings: "lnum" 1; }
 
-.dagny-200, .filter-section h1.filter-title {
+.dagny-200, .right-side-col p {
   font-family: "ff-dagny-web-pro";
   font-weight: 200;
   font-variant-numeric: lining-nums;
@@ -28,7 +28,7 @@ body {
   -webkit-font-feature-settings: "lnum" 1;
   font-feature-settings: "lnum" 1; }
 
-.dagny-300, body {
+.dagny-300, body, html {
   font-family: "ff-dagny-web";
   font-weight: 300;
   font-variant-numeric: lining-nums;
@@ -50,7 +50,7 @@ body {
   -webkit-font-feature-settings: "lnum" 1;
   font-feature-settings: "lnum" 1; }
 
-.dagny-500 {
+.dagny-500, .right-side-col h1 {
   font-family: "ff-dagny-web-pro";
   font-weight: 700; }
 
@@ -72,66 +72,55 @@ body {
 
   .col {
     display: table-cell; } }
-body {
+body, html {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%; }
 
 .body-wrapper {
   position: relative;
   transition: left 0.5s;
   left: 0px;
-  left: 325px; }
-
-nav {
-  position: relative;
-  background: #00AD63;
-  padding: 20px 0; }
-  nav i.ion-navicon {
-    position: absolute;
-    left: 20px;
-    top: 15px;
-    color: #fff;
-    font-size: 32px; }
-  nav h1 {
-    color: #fff;
-    margin: 0;
-    margin-left: 60px; }
-
-.filter-section {
-  position: absolute;
-  left: -325px;
-  top: 0px;
-  width: 325px; }
-  .filter-section h1.filter-title {
-    text-align: center;
-    margin: 0;
-    height: 64px;
-    line-height: 64px;
-    background: white;
-    color: #5F7D8C; }
-    .filter-section h1.filter-title i {
-      margin-right: 10px;
-      color: #8FA4AF; }
-
-.filter-item-container {
-  border-top: 1px solid #CFD8DC;
-  border-bottom: 1px solid #CFD8DC;
-  border-right: 1px solid #CFD8DC; }
-
-h2.filter-item-heading {
+  height: 100%;
   width: 100%;
-  position: relative;
-  background: #ECEFF1;
-  margin: 0;
-  padding: 16px 0;
-  color: #8FA4AF; }
-  h2.filter-item-heading span {
-    padding-left: 20px; }
-  h2.filter-item-heading i.icon {
-    position: absolute;
-    right: 20px;
-    color: #8FA4AF; }
+  background: #F89985; }
 
-.filter-item-search-container {
-  width: 100%;
-  background: #7DD3FC; }
+.row {
+  height: 100%; }
+
+.left-side-col {
+  background: #F89985;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center; }
+
+.right-side-col {
+  background: white;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center; }
+  .right-side-col h1 {
+    font-size: 50px;
+    margin: 20px auto; }
+  .right-side-col p {
+    padding: 0 20px;
+    max-width: 85%;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 28px; }
+
+.main-gallery {
+  transition: 0.3s background; }
+
+.gallery-cell {
+  width: 100%; }
+
+.flickity-page-dots {
+  bottom: 20px; }
+
+li.dots {
+  background-color: red;
+  transition: 0.3s opacity !important; }
+
+.ion-heart {
+  color: #F56B5C; }
